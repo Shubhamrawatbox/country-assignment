@@ -13,7 +13,6 @@ const findCountryName=async(url,name)=>{
    }
    const jsonData = await response.json();
    const result=jsonData?.filter((item:any)=>item?.cca3 === name)
-   console.log('resultss',jsonData,result,name)
    return result?.[0]?.name?.official
  } catch (error:any) {
    console.log(error);

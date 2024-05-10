@@ -44,7 +44,6 @@ const ItemDetail = () => {
 
   const handleClick = async (value: string) => {
     const findcountryname = await findCountryName(apiurl, value);
-    console.log("resp", findcountryname);
     navigate(`/details/${findcountryname}`);
     window.location.reload();
   };
