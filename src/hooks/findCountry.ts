@@ -1,11 +1,4 @@
-import { useState, useEffect } from 'react';
-
-interface ApiResponse<T> {
-  countryData: T | null;
-}
-
-
-const findCountryName=async(url,name)=>{
+const findCountryName=async(url:string,name:string)=>{
   try {
     const  response = await fetch(`${url}/all?fields=cca3,name`);
    if (!response.ok) {
