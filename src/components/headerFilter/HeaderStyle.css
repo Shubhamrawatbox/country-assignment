@@ -1,8 +1,4 @@
-label {
-    display: flex;
-    position: relative;
-    margin-bottom: 2rem;
-  }
+
   
   
   
@@ -19,6 +15,12 @@ label {
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+  }
+
+  .filter-container label {
+    display: flex;
+    position: relative;
+    margin-bottom: 2rem;
   }
 
   .filter-container input {
@@ -39,3 +41,12 @@ label {
     color: #fff;
   }
   
+/*responsive design here */
+  @media screen and (max-width: 460px) {
+    .filter-container input{
+      min-width: 100%;
+    }
+    .filter-container label{
+      flex-basis: 100%;
+    }
+  }
