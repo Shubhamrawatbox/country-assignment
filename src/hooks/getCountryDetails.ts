@@ -25,7 +25,6 @@ const useGetCountryDetailsApi = <T>(url: string,id?:string  | undefined): ApiRes
           throw new Error('Failed to fetch data');
         }
         const jsonData = await response.json();
-        console.log('jsonData',jsonData)
         setData(jsonData);
         
       } catch (error:any) {

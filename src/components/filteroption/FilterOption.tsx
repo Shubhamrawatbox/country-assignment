@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { filterOptionData } from "../../constants/filterOptionData";
 import "./FilterStyle.css";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 
 export interface itemInterface {
   name: string;
@@ -20,14 +22,12 @@ const FilterOption: React.FC<FilterOptionInterface> = ({
 }) => {
   const [showOptions, setShowOptions] = useState<boolean>(false);
 
-  console.log("selectRegion", selectRegion);
 
   const hanldeToggleOption = () => {
     setShowOptions(!showOptions);
   };
 
   const handleFilter = (item: itemInterface) => {
-    console.log("itemss", item);
     setShowOptions(!showOptions);
     applyFilter(item);
   };
@@ -42,6 +42,7 @@ const FilterOption: React.FC<FilterOptionInterface> = ({
           onClick={hanldeToggleOption}
         >
           {selectRegion ? selectRegion?.name : "  Filter by Region"}
+          <RiArrowDropDownLine/>
         </button>
         {showOptions && (
           <div

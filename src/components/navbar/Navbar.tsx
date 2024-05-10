@@ -3,9 +3,6 @@ import { useTheme } from '../../context/ThemeContext';
 const Navbar = () => {
   const { initialTheme,toggleTheme } = useTheme();
 
-  console.log('initialTheme',initialTheme)
-
-
   return (
     <nav className={`navbar ${initialTheme === 'dark' ? 'dark' : 'light'}`}>
       <div className="logo">
