@@ -175,6 +175,7 @@ button:focus-visible {
   width: 95px;
   text-align: center;
   margin: 5px;
+  cursor: pointer;
 }
 
 .border_name_box.dark{

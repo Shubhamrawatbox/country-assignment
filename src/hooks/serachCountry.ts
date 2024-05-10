@@ -27,6 +27,7 @@ const useSearchCountryApi = <T>(searchTerm: string): ApiResponse<T> => {
         setSearchResults(jsonData);
       } catch (error: any) {
         setError(error);
+        setSearchResults([]);
       } finally {
         setIsLoading(false);
       }

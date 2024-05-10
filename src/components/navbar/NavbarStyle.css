@@ -18,6 +18,10 @@
   .mode-toggle {
     display: flex;
     align-items: center;
+    cursor: pointer;
+  }
+  .mode-toggle:hover{
+    font-weight: 800;
   }
   
   .switch {
